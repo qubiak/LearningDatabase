@@ -16,11 +16,13 @@ public class DBConnector {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, userName, password);
             System.err.println("Database connection established");
+            DBReadOrSave.chooser();
         } catch (Exception e) {
             System.out.println("Cannot connect to database server " + e);
 
 
-        } finally {
+        }
+    finally {
             if (connection != null) {
                 try {
                     connection.close();
