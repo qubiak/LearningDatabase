@@ -8,7 +8,7 @@ import java.util.List;
 public class EmployeeDAO {
 
     public List<Employee> getAll() {
-        List<Employee> result = new ArrayList<Employee>();
+        List<Employee> result = new ArrayList<>();
 
         try {
             Statement statement = DatabaseConnector.DatabaseConnector.getConnection().createStatement();

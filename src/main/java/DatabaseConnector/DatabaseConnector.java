@@ -1,6 +1,8 @@
 package DatabaseConnector;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DatabaseConnector {
 
@@ -22,7 +24,9 @@ public class DatabaseConnector {
             String password = "mysql";
             String url = "jdbc:mysql://localhost:3306/lerningdatabase?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-        } catch (ClassNotFoundException e) {
+            return DriverManager.getConnection(url, username, password);
+
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
 
