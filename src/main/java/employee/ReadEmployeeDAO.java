@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeDAO {
+public class ReadEmployeeDAO {
 
     public List<Employee> getAll() {
         List<Employee> result = new ArrayList<>();

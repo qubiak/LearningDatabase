@@ -1,3 +1,7 @@
+import employee.Employee;
+import employee.NewEmployeeData;
+import employee.ReadEmployeeDAO;
+
 import java.util.Scanner;
 
 public class DBReadOrSave {
@@ -16,22 +20,20 @@ public class DBReadOrSave {
             switch (x) {
 
                 case 1: {
-                    DBRead.readFramDatabase();
+
+                    ReadEmployeeDAO rd = new ReadEmployeeDAO();
+
+                    for (Employee r : rd.getAll()) {
+                        System.out.println("ID: " + r.getID() + " " + r.getName() + " " + r.getSurname() + " " + r.getSalary());
+                    }
+                    break;
                 }
 
                 case 2: {
-                    Scanner input = new Scanner(System.in);
 
-                    System.out.println("Podaj imię pracownika");
-                    String name = input.nextLine();
-                    System.out.println("Podaj imięnazwisko pracownika");
-                    String surname = input.nextLine();
-                    System.out.println("Podaj wynagrodzenie pracownika");
-                    int salary = input.nextInt();
-
-                    System.out.println("imię: " + name + ", nazwisko: " + surname + ", wynagrodzenie: " + salary);
+                    NewEmployeeData.chooser();
                 }
-                DBSave.saveToDatabase();
+
 
             }
 
