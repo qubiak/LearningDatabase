@@ -23,7 +23,7 @@ public class NewEmployeeData {
         System.out.println("imię: " + name + ", nazwisko: " + surname + ", wynagrodzenie: " + salary);
 
 
-        String sql = "INSERT INTO `employee`(`ID`, `name`, `surname`, `salary`) VALUES ( universal.nextval, '" + name +"," + surname +"," + salary + "')";
+        String sql = "INSERT INTO `employee`(`name`, `surname`, `salary`) VALUES ( universal.nextval, null'," + name +"','" + surname +"','" + salary + "')";
         System.out.println(sql);
 
         try {
