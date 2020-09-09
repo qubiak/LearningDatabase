@@ -7,35 +7,35 @@ public class Employee {
     private String surname;
     private Long salary;
 
-    public Long getID() {
-        return ID;
-    }
-
-    public void setID(long id) {
-        this.ID = ID;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = this.name;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = this.surname;
-    }
-
     public Long getSalary() {
         return salary;
     }
 
-    public void setSalary(long salary) {
-        this.salary = this.salary;
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setSalary(Long salary) {
+        this.salary = salary;
     }
 }
