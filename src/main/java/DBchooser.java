@@ -1,10 +1,8 @@
-import employee.Employee;
-import employee.NewEmployeeData;
-import employee.ReadEmployeeDAO;
+import employee.*;
 
 import java.util.Scanner;
 
-public class DBReadOrSave {
+public class DBchooser {
 
     public static void chooser() {
 
@@ -14,6 +12,7 @@ public class DBReadOrSave {
 
             System.out.println("for read press 1");
             System.out.println("for save press 2");
+            System.out.println("for delate pres 3");
 
             int x = in.nextInt();
 
@@ -21,17 +20,20 @@ public class DBReadOrSave {
 
                 case 1: {
 
-                    ReadEmployeeDAO rd = new ReadEmployeeDAO();
+                    ReadEmployee.ReadData();
 
-                    for (Employee r : rd.getAll()) {
-                        System.out.println("ID: " + r.getID() + " " + r.getName() + " " + r.getSurname() + " " + r.getSalary());
-                    }
                     break;
                 }
 
                 case 2: {
 
-                    NewEmployeeData.chooser();
+                    NewEmployee.chooser();
+                }
+
+                case 3: {
+
+                    RemoveEmployee.RemoveData();
+
                 }
 
 

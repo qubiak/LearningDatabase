@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class NewEmployeeData {
+public class NewEmployee {
 
     public static void chooser()    {
 
@@ -24,7 +24,7 @@ public class NewEmployeeData {
 
 
         String sql = String.format("INSERT INTO employee(name, surname, salary) VALUES ( '%s', '%s' , '%s')", name, surname, salary);
-        System.out.println(sql);
+        //System.out.println(sql);
 
         try {
             Statement statement = DatabaseConnector.getConnection().createStatement();
