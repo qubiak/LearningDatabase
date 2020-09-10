@@ -26,14 +26,7 @@ public class NewEmployee {
         String sql = String.format("INSERT INTO employee(name, surname, salary) VALUES ( '%s', '%s' , '%s')", name, surname, salary);
         //System.out.println(sql);
 
-        try {
-            Statement statement = DatabaseConnector.getConnection().createStatement();
-            statement.execute(sql);
-            statement.close();
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        ActionsOnData.saveChanges(sql);
 
     }
 }

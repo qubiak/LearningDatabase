@@ -1,9 +1,5 @@
 package employee;
 
-import DatabaseConnector.DatabaseConnector;
-
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 public class RemoveEmployee {
@@ -18,17 +14,8 @@ public class RemoveEmployee {
         int x = in.nextInt();
 
         String sql = String.format("DELETE FROM `employee` WHERE ID = '%s'", x);
-        System.out.println(sql);
+        //System.out.println(sql);
 
-        try {
-            Statement statement = DatabaseConnector.getConnection().createStatement();
-            statement.execute(sql);
-            statement.close();
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-
-
-        }
+        ActionsOnData.saveChanges(sql);
     }
 }
