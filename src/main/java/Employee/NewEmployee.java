@@ -1,32 +1,33 @@
-package employee;
+package Employee;
 
-import DatabaseConnector.DatabaseConnector;
-
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 public class NewEmployee {
 
-    public static void chooser()    {
+    public static String name;
+    public static String surname;
+    public static Integer salary;
+
+    public static void newEmployeeData() {
 
         Scanner input = new Scanner(System.in);
 
-
         System.out.println("Podaj imię pracownika");
-        String name = input.nextLine();
+        name = input.nextLine();
         System.out.println("Podaj nazwisko pracownika");
-        String surname = input.nextLine();
+        surname = input.nextLine();
         System.out.println("Podaj wynagrodzenie pracownika");
-        int salary = input.nextInt();
+        salary = input.nextInt();
 
         System.out.println("imię: " + name + ", nazwisko: " + surname + ", wynagrodzenie: " + salary);
+    }
 
+    public static void newEmployeeSql() {
 
         String sql = String.format("INSERT INTO employee(name, surname, salary) VALUES ( '%s', '%s' , '%s')", name, surname, salary);
         //System.out.println(sql);
 
-        ActionsOnData.saveChanges(sql);
+        DatabaseQuery.saveChanges(sql);
 
     }
 }

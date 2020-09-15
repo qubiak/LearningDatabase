@@ -1,10 +1,12 @@
-import employee.*;
+package Menu;
+
+import Employee.*;
 
 import java.util.Scanner;
 
-public class DBchooser {
+public class Menu {
 
-    public static void chooser() {
+    public static void DBMenu() {
 
         Scanner in = new Scanner(System.in);
 
@@ -19,26 +21,20 @@ public class DBchooser {
             switch (x) {
 
                 case 1: {
-
                     ReadEmployee.ReadData();
-
                     break;
                 }
 
                 case 2: {
-
-                    NewEmployee.chooser();
+                    NewEmployee.newEmployeeData();
+                    NewEmployee.newEmployeeSql();
                 }
 
                 case 3: {
-
-                    RemoveEmployee.RemoveData();
-
+                    RemoveEmployee.removeEmployeeData();
+                    RemoveEmployee.removeEmployeeSql();
                 }
-
-
             }
-
         }
     }
 }

@@ -1,11 +1,11 @@
-package employee;
+package Employee;
 
 import DatabaseConnector.DatabaseConnector;
 
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ActionsOnData {
+public class DatabaseQuery {
 
     public static void saveChanges(String sql) {
         try {

@@ -1,4 +1,6 @@
-package employee;
+package Employee;
+
+import Employee.Model.Employee;
 
 public class ReadEmployee {
 
@@ -7,7 +9,7 @@ public class ReadEmployee {
         ReadEmployeeDAO rd = new ReadEmployeeDAO();
 
         for (Employee r : rd.getAll()) {
-            System.out.println("ID: " + r.getID() + " " + r.getName() + " " + r.getSurname() + " " + r.getSalary());
+            System.out.println(String.format("ID: %s %s %s %s", r.getID(), r.getName(), r.getSurname(), r.getSalary()));
         }
     }
 }

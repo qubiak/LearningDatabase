@@ -27,11 +27,8 @@ public class DatabaseConnector {
             return DriverManager.getConnection(url, username, password);
 
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Could not connect to DB", e);
         }
-
-
-        return null;
     }
 }
 

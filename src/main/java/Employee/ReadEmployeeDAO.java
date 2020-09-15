@@ -1,4 +1,6 @@
-package employee;
+package Employee;
+
+import Employee.Model.Employee;
 
 import java.sql.ResultSet;
 import java.sql.Statement;

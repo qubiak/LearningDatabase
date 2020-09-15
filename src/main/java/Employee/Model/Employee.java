@@ -1,4 +1,4 @@
-package employee;
+package Employee.Model;
 
 public class Employee {
 
