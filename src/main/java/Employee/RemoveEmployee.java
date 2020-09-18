@@ -17,6 +17,6 @@ public class RemoveEmployee {
         String sql = String.format("DELETE FROM `employee` WHERE ID = '%s'", numID);
         //System.out.println(sql);
 
-        DatabaseQuery.saveChanges(sql);
+        DatabaseQuery.execute(sql);
     }
 }
